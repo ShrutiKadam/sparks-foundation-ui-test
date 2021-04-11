@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Poppins', sans-serif;
+    --header-color: rgb(136, 136, 136);
+    --shadow-color: rgb(207, 207, 207);
+    --text-color:#111;
+    --active-color:rgb(32, 32, 248);
+    --section-color: rgb(229, 233, 236);
+}
+body{
+    display: grid;
+    grid-template-rows:10vh 80vh 10vh;
+    color: var(--text-color);
+}
+header,
+main{
+    display: grid;
+    grid-template-columns: 10vw 90vw;
+}
+
+.header-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    box-shadow: 10px 0 10px -2px var(--shadow-color);
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 90vh;
+    padding-top: 1.5rem;
+    box-shadow: 10px 0 10px -2px var(--shadow-color);
+    z-index: 1;
+}
+
+.nav-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: .8rem .5rem;
+    width: 100%;
+    border-left: 2px solid transparent;
+}
+.nav-item:hover,.nav-item:active,.nav-item:nth-child(2){
+    cursor: pointer;
+    background-color: var(--section-color);
+    border-left: 4px solid var(--active-color);
+    font-weight: 700;
+}
+
+.icon{
+    font-size: 1.5rem;
+}
+.label{
+    font-size: .6rem;
+}
+section{
+    display: grid;
+    grid-template-rows: 15% 60%;
+    padding:1rem;
+    background-color: var(--section-color);
+}
+.row{
+    display: flex;
+}
+
+.flex-col{
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.sec-header{
+    display: flex;
+    align-items: center;
+    color: var(--header-color);
+}
+.sec-header div{
+    padding: .2em .2em;
+}
+.sec-header div:last-child{
+    font-weight: bold;
+}
+.url-input input{
+    width: 70vw;
+    padding: .5rem 1rem;
+    outline: none;
+    border: none;
+}
+.file-input{
+    height: 150px;
+    width: 140px;
+    border-radius: .2rem;
+    align-self: flex-start;
+    background-color: white;
+    margin:1rem 0 0 8rem;
+    padding: .5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.file-input,.file-input label{
+    cursor: pointer;
+    font-weight: 800;
+    font-style: bold;
+}
